@@ -1,0 +1,63 @@
+.container {
+    background-image: url("birth-certificate-in-india.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Nav Bar styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px;
+}
+
+.left-nav {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.right-nav {
+    display: flex;
+}
+
+.navbar>.right-nav>div {
+    margin-right: 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link a {
+    color: #700303e0;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link a:hover {
+    color: black;
+}
+
+
+/*home page*/
+
+.home-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
