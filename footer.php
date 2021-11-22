@@ -1,10 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <footer class="page-footer dark">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
                 <h5>Get started</h5>
                 <ul>
-                    <li><a href="# "> Home</a></li>
+                    <li><a href="index.php"> Home</a></li>
                     <li><a href="# ">Generate Certificate</a></li>
                     <li><a href="# ">View /Download Certificate</a></li>
                 </ul>
@@ -39,6 +43,8 @@
         <p>©2021 Online Birth Certificate Generator</p>
     </div>
 </footer>
+</body>
+</html>
 
 <!-- End: Footer Dark -->
 <script src="assets/bootstrap/js/bootstrap.min.js "></script>

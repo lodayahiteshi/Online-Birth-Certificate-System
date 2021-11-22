@@ -1,6 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+</head>
+<body>
 <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
     <div class="container">
-        <a class="navbar-brand logo" href="#">Birth Certificate Generation</a>
+        <a class="navbar-brand logo" href="index.php">Birth Certificate Generation</a>
         <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
             <span class="visually-hidden">Toggle navigation</span>
             <span class="navbar-toggler-icon"></span>
@@ -15,3 +20,5 @@
         </div>
     </div>
 </nav>
+</body>
+</html>

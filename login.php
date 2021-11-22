@@ -24,22 +24,25 @@
         </div>
         <form>
           <div class="mb-3">
-            <label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email" />
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control item" type="email" id="email" required />
           </div>
           <div class="mb-3">
-            <label class="form-label" for="password">Password</label><input class="form-control" type="password" id="password" />
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" type="password" id="password" required/>
           </div>
           <div class="mb-3">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="checkbox" /><label class="form-check-label" for="checkbox">Remember me</label>
+              <input class="form-check-input" type="checkbox" id="checkbox" />
+              <label class="form-check-label" for="checkbox">Remember me</label>
             </div>
           </div>
-          <button class="btn btn-primary" type="submit">Log In</button>
+          <button class="btn btn-primary" type="submit" onclick="window.location.href = 'user-dash.php';">Log In</button>
         </form>
       </div>
     </section>
   </main>
   <!-- Start: Footer Dark -->
   <?php include 'footer.php'; ?>
-
+</body>
 </html>

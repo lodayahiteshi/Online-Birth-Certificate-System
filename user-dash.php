@@ -15,11 +15,10 @@
         <nav class="main-nav">
             <img src="https://previews.123rf.com/images/irinanaz/irinanaz1912/irinanaz191200052/134950243-sleeping-newborn-protection-and-care-for-baby-logo-in-a-linear-style-colored-vector-illustration-whi.jpg" class="logo">
             <ul class="main-menu">
-                <li><a href="home.php">HOME</a></li>
+                <li><a href="user-dash.php">HOME</a></li>
                 <li><a href="#">STATES</a></li>
                 <li><a href="#">FAQs</a></li>
                 <li><a href="#">CONTACT US</a></li>
-                <li><a href="#">ADMIN</a></li>
             </ul>
         </nav>
     </div>
