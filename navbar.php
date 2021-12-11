@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-</head>
-<body>
 <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
     <div class="container">
         <a class="navbar-brand logo" href="index.php">Birth Certificate Generation</a>
@@ -14,11 +9,9 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="features.php">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.php">User</a></li>
-                <li class="nav-item"><a class="nav-link" href="admin-login.php">ADMIN</a></li>
+                <li class="nav-item"><a class="nav-link" href="login_form.php">User</a></li>
+                <li class="nav-item"><a class="nav-link" href="login_form.php">ADMIN</a></li>
             </ul>
         </div>
     </div>
 </nav>
-</body>
-</html>
