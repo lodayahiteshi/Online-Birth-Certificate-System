@@ -1,0 +1,35 @@
+*{
+    background:powderblue ;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+h2{
+    color: crimson;
+}
+
+input[type=textbox]{
+    width:20%;
+    height:5%;
+    border:1px solid black;
+    border-radius: 4px;
+}
+
+input[type=button]{
+    background-color: black;
+    color:white;
+    border:none;
+    width:130px;
+    height:40px;
+    padding:2px;
+    cursor:pointer;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+label{
+    font-weight: bold;
+    color:#333;
+    font-size:18px;
+}
