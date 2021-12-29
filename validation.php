@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
     $query_run = mysqli_query($con, $s);
     if (mysqli_num_rows($query_run) > 0) {
         $_SESSION['username'] = $username;
-        header('location:user/user-dash.php');
+        header('location:user/index.php');
     } else {
         echo '<script type=text/javascript> alert("Invalid details") </script>';
     }
