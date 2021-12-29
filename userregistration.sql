@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 21, 2021 at 09:54 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- Host: localhost
+-- Generation Time: Dec 29, 2021 at 01:48 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,13 +39,15 @@ CREATE TABLE `usertable` (
 INSERT INTO `usertable` (`uname`, `passwords`) VALUES
 ('soniya', '123'),
 ('dishank', '4321'),
-('sanika', '9827'),
+('sanika', 'sanika'),
 ('prerna', '4363'),
 ('soniya nandwani', '$oniya'),
 ('dishank nayak', '1111'),
 ('S', '999'),
 ('P', '000'),
-('G', 'aaa');
+('G', 'aaa'),
+('sanika1', 'sanika'),
+('sanika_k', 'sanika');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
