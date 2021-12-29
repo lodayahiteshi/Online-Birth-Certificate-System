@@ -1,11 +1,11 @@
-<!-- <?php include 'database_connect.php'; ?> -->
+<?php include 'database_connect.php'; ?>
 <!doctype html>
 <html>
 
 <head>
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="assets/css/forgot_pass.css">
-    <link rel="icon" href="asstes/img/favicon.png" size="32*32" type="image/x-icon">
+    <link rel="stylesheet" href="forgot_pass.css">
+    <link rel="icon" href="images/favicon.png" size="32*32" type="image/x-icon">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <button class="button1" name="reset" type="submit">Reset Password</button>
         </form>
     </div>
-    <!-- <?php include 'forgotpass.php'; ?> -->
+    <?php include 'forgotpass.php'; ?>
     <p style="position:fixed; right:550px; top:660px; padding:10px"><a href="login_form.php">Login Using Credentials?</a></p>
 </body>
 
