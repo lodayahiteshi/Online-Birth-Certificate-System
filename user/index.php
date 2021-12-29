@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="../assets/css/user-dash.css">
-    <link rel="stylesheet" href="../assets/css/footer.css">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/user-dash.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="icon" href="https://img.icons8.com/ultraviolet/2x/baby-feet.png" size="32*32" type="image/x-icon">
     <style>
         body {
@@ -23,7 +23,7 @@
                 <li><a href="#"></a></li>
                 <li><a href="../index.php">HOME</a></li>
                 <li><a href="#">STATES</a></li>
-                <li><a href="faq.php">FAQs</a></li>
+                <li><a href="user/faq.php">FAQs</a></li>
                 <li><a href="#">CONTACT US</a></li>
 
             </ul>

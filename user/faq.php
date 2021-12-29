@@ -2,13 +2,13 @@
 
 <head>
     <title>FAQs</title>
-    <link rel="icon" href="../assets/img/avatars/main.svg" type=" image/x-icon " />
-    <link rel="stylesheet" href="../assets/css/faq.css" />
-    <link rel="manifest " href="../manifest.json " />
+    <link rel="icon" href="./assets/img/avatars/main.svg" type=" image/x-icon " />
+    <link rel="stylesheet" href="./assets/css/faq.css" />
+    <!-- <link rel="manifest " href="../manifest.json " /> -->
     <link rel="stylesheet " href="../assets/bootstrap/css/bootstrap.min.css " />
     <link rel="stylesheet " href="../assets/fonts/simple-line-icons.min.css " />
     <link rel="stylesheet " href="../assets/css/vanilla-zoom.min.css " />
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 
 </head>
 

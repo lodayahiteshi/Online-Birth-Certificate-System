@@ -1,5 +1,5 @@
 <?php
-include 'database_connect.php';
+include './database_connect.php';
 
 if (isset($_POST['submit'])) {
     //information of child
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
     $moccup = $_POST['moccup'];
     $meducate = $_POST['meducate'];
     //permanent address
-    $place = $_POST['place'];
+    $place = $_POST['place1'];
     $perbldg = $_POST['perbldg'];
     $perhouse = $_POST['perhouse'];
     $perstreet = $_POST['perstreet'];
@@ -56,18 +56,25 @@ if (isset($_POST['submit'])) {
     $infaddress = $_POST['infaddress'];
     $infpin = $_POST['infpin'];
     $infmobile = $_POST['infmobile'];
-    $reportdate = $_POST['reportingdate'];
+    $reportdate = $_POST['reportdate'];
     //other information
     $mage = $_POST['ageofmth'];
     $chborn = $_POST['numchildborn'];
     $delmeth = $_POST['delmeth'];
-    $fn = $_FILES['aadharproof']['name'];
-    $tm1 = $_FILES['aadharproof']['tmp_name'];
-    move_uploaded_file($tm1, "../assets/aadharproof/" . $fn);
 
-    $afn = $_FILES['affproof']['name'];
-    $tm2 = $_FILES['aadharproof']['tmp_name'];
-    move_uploaded_file($tm2, "../assets/affproof/" . $afn);
+    // $conn = mysqli_connect('localhost', 'root', '', 'example');
+    // if (isset($_POST['submit'])) {
+    $fileName = $_FILES['aadharproof']['name'];
+    $fileTmpName = $_FILES['aadharproof']['tmp_name'];
+    $path1 = "../aadharproof" . $fileName;
+    move_uploaded_file($fileTmpName, $path1);
+
+    $afdFileName = $_FILES['affproof']['name'];
+    $afdFileTmpName = $_FILES['affproof']['tmp_name'];
+    $path2 = "../affproof" . $afdFileName;
+    move_uploaded_file($afdFileTmpName, $path2);
+
+    $appnumber = mt_rand(100000000, 999999999);
 
     $query1 = mysqli_query($con, "INSERT INTO info_of_child (firstname,midname,lastname,dob,gender,cweight,aadhar) VALUES('$firstname','$midname','$lastname','$dob','$gender','$weight','$aadhar')");
     $query2 = mysqli_query($con, "INSERT INTO place_of_birth (pob,bldg_no_name,house_no,street_lane,pstate,district,village_town,pincode) VALUES('$pob','$bldg_no_name','$house_no','$street_lane','$pstate','$district','$village_town','$pincode')");
@@ -75,11 +82,19 @@ if (isset($_POST['submit'])) {
     $query4 = mysqli_query($con, "INSERT INTO mothers_info (mfname,mmidname,mlname,maadhar,memail,mmobile,mreligion,moccup,meducate) VALUES ('$mname','$mmidname','$mlname','$maadhar','$memail','$mmobile','$mreligion','$moccup','$meducate')");
     $query5 = mysqli_query($con, "INSERT INTO permanent_addr (place,perbldg,perhouse,perstreet,perlocal,perstate,perdistr,pervillage,perpin) VALUES ('$place','$perbldg','$perhouse','$perstreet','$perlocal','$perstate','$perdistr','$pervillage','$perpin')");
     $query6 = mysqli_query($con, "INSERT INTO informants_info (inffname,infmname,inflname,infaddress,infpin,infmobile,reportdate) VALUES ('$inffname','$infmname','$inflname','$infaddress','$infpin','$infmobile','$reportdate')");
-    $query7 = mysqli_query($con, "INSERT INTO other_info (mage,chborn,delmeth,aadharproof,affproof) VALUES('$mage','$chborn','$delmeth','$fn','$afn')");
+    $query7 = mysqli_query($con, "INSERT INTO other_info (mage,chborn,delmeth,aadharproof,affproof) VALUES('$mage','$chborn','$delmeth','$fileName','$afdFileName')");
+    $query8 = mysqli_query($con, "INSERT INTO appid(ApplicationID,status) VALUES('$appnumber','Pending')");
 
-    if ((!$query1) && (!$query2) && (!$query3) && (!$query4) && (!$query5) && (!$query6) && (!$query7)) {
-        echo '<script type="text/javascript"> alert("Error") </script>';
+    if ((!$query1) && (!$query2) && (!$query3) && (!$query4) && (!$query5) && (!$query6) && (!$query7) && (!$query8)) {
+        echo '<script type="text/javascript">
+        alert("Error")
+        </script>';
     } else {
-        echo '<script type="text/javascript"> alert("Record Added Successfully") </script>';
+        echo '<script type="text/javascript">
+        alert("\nRecord Added Successfully\n Your Application ID is: ' . $appnumber . '");
+        </script>';
+        // header("Location:./user-dash.php");  
     }
 }
+
+// echo '<script type="text/javascript">alert("Data has been submitted to ' . $to . '");</script>';

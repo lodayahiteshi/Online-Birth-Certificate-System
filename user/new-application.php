@@ -5,114 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>New Application</title>
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="../manifest.json">
-    <link rel="stylesheet" href="../assets/css/Application-Form.css">
-    <link rel="stylesheet" href="../assets/css/Responsive-Form.css">
-    <link rel="stylesheet" href="../assets/css/vanilla-zoom.min.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/application-form.css">
+    <link rel="stylesheet" href="./assets/css/vanilla-zoom.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="cities.js"></script>
+    <script src="./assets/js/new-app.js"></script>
 </head>
-<script>
-    function sameAddress() {
-        const isChecked = document.querySelector(`input[name="checkAddr"]:checked`);
-        if (isChecked) {
-            document.appForm.perbldg.value = document.appForm.bchbldg.value;
-            document.appForm.perhouse.value = document.appForm.bchhouse.value;
-            document.appForm.perstreet.value = document.appForm.bchstreet.value;
-            document.appForm.perlocal.value = document.appForm.bchlocal.value;
-            document.appForm.perstate.value = document.appForm.bchstate.value;
-            document.appForm.perdistr.value = document.appForm.bchdistr.value;
-            document.appForm.pervillage.value = document.appForm.bchvillage.value;
-            document.appForm.perpin.value = document.appForm.bchpin.value;
-            console.log("Checked");
-        } else {
-            console.log("Unchecked");
-        }
-    }
-
-    function checkSingleF() {
-        const isSingleF = document.querySelector(`input[name="singleF"]:checked`);
-        if (isSingleF) {
-            document.appForm.mthfname.value = "null";
-            document.appForm.mthmname.value = "null";
-            document.appForm.mthlname.value = "null";
-            document.appForm.maadhar.value = null;
-            document.appForm.memail.value = "null";
-            document.appForm.mmobile.value = null;
-            document.appForm.mreligion.value = "null";
-            document.appForm.moccup.value = "null";
-            document.appForm.meducate.value = "null";
-            document.appForm.mthfname.disabled = true;
-            document.appForm.mthmname.disabled = true;
-            document.appForm.mthlname.disabled = true;
-            document.appForm.maadhar.disabled = true;
-            document.appForm.memail.disabled = true;
-            document.appForm.mmobile.disabled = true;
-            document.appForm.mreligion.disabled = true;
-            document.appForm.moccup.disabled = true;
-            document.appForm.meducate.disabled = true;
-            console.log("disabled");
-        } else {
-            document.appForm.mthfname.disabled = false;
-            document.appForm.mthmname.disabled = false;
-            document.appForm.mthlname.disabled = false;
-            document.appForm.maadhar.disabled = false;
-            document.appForm.memail.disabled = false;
-            document.appForm.mmobile.disabled = false
-            document.appForm.mreligion.disabled = false;
-            document.appForm.moccup.disabled = false;
-            document.appForm.meducate.disabled = false;
-            console.log("enabled");
-        }
-    }
-
-    function checkSingleM() {
-        const isSingleM = document.querySelector(`input[name="singleM"]:checked`);
-        if (isSingleM) {
-            document.appForm.fthfname.value = "null";
-            document.appForm.fthmname.value = "null";
-            document.appForm.fthlname.value = "null";
-            document.appForm.faadhar.value = null;
-            document.appForm.femail.value = "null";
-            document.appForm.fmobile.value = null;
-            document.appForm.freligion.value = "null";
-            document.appForm.foccup.value = "null";
-            document.appForm.feducate.value = "null";
-            document.appForm.fthfname.disabled = true;
-            document.appForm.fthmname.disabled = true;
-            document.appForm.fthlname.disabled = true;
-            document.appForm.faadhar.disabled = true;
-            document.appForm.femail.disabled = true;
-            document.appForm.fmobile.disabled = true;
-            document.appForm.freligion.disabled = true;
-            document.appForm.foccup.disabled = true;
-            document.appForm.feducate.disabled = true;
-            console.log("disabled");
-        } else {
-            document.appForm.fthfname.disabled = false;
-            document.appForm.fthmname.disabled = false;
-            document.appForm.fthlname.disabled = false;
-            document.appForm.faadhar.disabled = false;
-            document.appForm.femail.disabled = false;
-            document.appForm.fmobile.disabled = false
-            document.appForm.freligion.disabled = false;
-            document.appForm.foccup.disabled = false;
-            document.appForm.feducate.disabled = false;
-            console.log("enabled");
-        }
-    }
-</script>
 
 <body>
     <!-- Start: Application Form -->
     <section>
         <h1 class="text-center" style="font-family:Cormorant Garamond, serif; font-size:30px">Application form</h1><br>
         <div class="container">
-            <form id="application-form" method="POST" name="appForm" enctype="multipart/form-data">
-
+            <form id="application-form" method="POST" enctype="multipart/form-data" name="appForm">
                 <!-- Information of Child -->
                 <div class="form-section">
                     <div class="section-head">
@@ -134,7 +45,7 @@
                     <div class="form-group mb-3">
                         <div class="row">
                             <div class="col">
-                                <p><strong>Date Of Birth</strong>&nbsp;<span class="text-danger">*</span></p><input class="shadow-sm form-control" type="datetime-local" required="" name="dob">
+                                <p><strong>Date Of Birth</strong>&nbsp;<span class="text-danger">*</span></p><input class="shadow-sm form-control" type="date" required="" name="dob">
                             </div>
                             <div class="col">
                                 <p><strong>Gender</strong>&nbsp;<span class="text-danger">*</span></p>
@@ -169,8 +80,8 @@
                                 <p><strong>Place of Birth&nbsp;</strong><span class="text-danger">*</span></p>
                                 <select class="shadow-sm form-select flex-grow-1" style="font-family:Roboto, sans-serif;" name="pob">
                                     <option style="display:none"></option>
-                                    <option value="">House</option>
-                                    <option value="">Other</option>
+                                    <option value="House">House</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
                             <div class="col"></div>
@@ -204,8 +115,8 @@
                             </div>
                             <div class="col">
                                 <p><strong>State</strong>&nbsp;<span class="text-danger">*</span></p>
-                                <select class="shadow-sm form-select selectState" style="font-family:Roboto, sans-serif;" name="pstate">
-                                    <option style="display:none"></option>
+                                <select onchange="print_city('shadow-sm form-select city', this.selectedIndex);" id="state" class="shadow-sm form-select state" style="font-family:Roboto, sans-serif;" name="pstate" required>
+                                    <?php include "state.php" ?>
                                 </select>
                             </div>
                             <div class="col">
@@ -221,7 +132,8 @@
                                     <strong>Village/Town</strong>&nbsp;
                                     <span class="text-danger">*</span>
                                 </p>
-                                <input class="shadow-sm form-control" type="text" required="" name="pobvillage">
+                                <!-- <input class="shadow-sm form-control" type="text" required="" name="pobvillage"> -->
+                                <select class="shadow-sm form-select city" id="city" type="text" required="" name="pobvillage"></select>
                             </div>
                             <div class="col-lg-4">
 
@@ -241,8 +153,8 @@
                     <div class="form-group mb-3">
                         <div class="row">
                             <div class="col">
-                                <input type="checkbox" name="singleF" value="single Father" onclick="checkSingleF()">
-                                <label for="single parent">Please check if they are Single Parent</label>
+                                <input type="checkbox" name="fcheck" value="single parent" onclick="checkSingleF()">
+                                <label for="single parent">Please check if you are Single Parent</label>
                             </div>
                         </div>
                     </div>
@@ -325,8 +237,8 @@
                     <div class="form-group mb-3">
                         <div class="row">
                             <div class="col">
-                                <input type="checkbox" name="singleM" value="single Mother" onclick="checkSingleM()">
-                                <label for="single parent">Please check if they are Single Parent</label>
+                                <input type="checkbox" name="mcheck" value="single parent" onclick="checkSingleM()">
+                                <label for="single parent">Please check if you are Single Parent</label>
                             </div>
                         </div>
                     </div>
@@ -446,8 +358,8 @@
                             </div>
                             <div class="col">
                                 <p><strong>State</strong>&nbsp;<span class="text-danger">*</span></p>
-                                <select class="shadow-sm form-select selectState" style="font-family:Roboto, sans-serif;" name="bchstate">
-                                    <option style="display:none"></option>
+                                <select onchange="print_city('shadow-sm form-select city', this.selectedIndex);" id="state" class="shadow-sm form-select state" style="font-family:Roboto, sans-serif;" name="bpstate" required>
+                                    <?php include "state.php" ?>
                                 </select>
                             </div>
                             <div class="col">
@@ -463,7 +375,9 @@
                                     <strong>Village/Town</strong>&nbsp;
                                     <span class="text-danger">*</span>
                                 </p>
-                                <input class="shadow-sm form-control" type="text" required="" name="bchvillage">
+                                <!-- <input class="shadow-sm form-control" type="text" required="" name="chvillage"> -->
+                                <select class="shadow-sm form-select city" id="city" type="text" required="" name="bchvillage"></select>
+
                             </div>
                             <div class="col-lg-4">
 
@@ -484,16 +398,17 @@
                     <div class="form-group mb-3">
                         <div class="row">
                             <div class="col">
-                                <input type="radio" name="place" value="In India" required="">
+                                <input type="radio" name="place1" value="In India" required="">
                                 <label for="in india">In India </label>
                             </div>
                             <div class="col">
-                                <input type="radio" name="place" value="Outside India" required="">
+                                <input type="radio" name="place1" value="Outside India" required="">
                                 <label for="outside india">Outside India </label>
                             </div>
                         </div><br>
                         <div class="row">
                             <div class="col">
+                                <!-- <input type="checkbox" name="check" value="check permanent address"> -->
                                 <input type="checkbox" name="checkAddr" value="check permanent address" onclick="sameAddress()">
                                 <label for="check permanent address">Please check if permanent address is same as above address</label>
                             </div>
@@ -528,13 +443,13 @@
                             </div>
                             <div class="col">
                                 <p><strong>State</strong>&nbsp;<span class="text-danger">*</span></p>
-                                <select class="shadow-sm form-select selectState" style="font-family:Roboto, sans-serif;" name="perstate">
-                                    <option style="display:none"></option>
+                                <select onchange="print_city('shadow-sm form-select city', this.selectedIndex);" id="state" class="shadow-sm form-select state" style="font-family:Roboto, sans-serif;" name="perstate" required>
+                                    <?php include "state.php" ?>
                                 </select>
                             </div>
                             <div class="col">
                                 <p><strong>District</strong>&nbsp;<span class="text-danger">*</span></p>
-                                <input class="shadow-sm form-control" type="text" required="" name="perdistr">
+                                <input class="shadow-sm form-control" type="text" name="perdistr" required="">
                             </div>
                         </div>
                     </div>
@@ -545,7 +460,9 @@
                                     <strong>Village/Town</strong>&nbsp;
                                     <span class="text-danger">*</span>
                                 </p>
-                                <input class="shadow-sm form-control" type="text" required="" name="pervillage">
+                                <!-- <input class="shadow-sm form-control" type="text" required="" name="pervillage"> -->
+                                <select class="shadow-sm form-select city" id="city" type="text" required="" name="pervillage"></select>
+
                             </div>
                             <div class="col-lg-4">
                                 <p><strong>Pin Code&nbsp;</strong><span class="text-danger">*</span></p>
@@ -597,7 +514,7 @@
                             </div><br>
                             <div class="col-lg-4">
                                 <p><strong>Reporting Date</strong>&nbsp;<span class="text-danger">*</span></p>
-                                <input class="shadow-sm form-control" type="date" required="" name="reportingdate">
+                                <input class="shadow-sm form-control" type="date" required="" name="reportdate">
                             </div>
                         </div>
                     </div>
@@ -605,7 +522,7 @@
                 <br>
 
                 <!--Other Information -->
-                <div class=" form-section">
+                <div class="form-section">
                     <div class="section-head">
                         <h4>Other Information</h4>
                     </div>
@@ -615,7 +532,7 @@
                                 <p><strong>Age of Mother at Time of Birth&nbsp;</strong><span class="text-danger">*</span></p>
                                 <input class="shadow-sm form-control" type="number" required="" name="ageofmth">
                             </div>
-                            <div class=" col-lg-4">
+                            <div class="col-lg-4">
                                 <p><strong>Number of Child Born Alive&nbsp;</strong><span class="text-danger">*</span></p>
                                 <input class="shadow-sm form-control" type="number" required="" name="numchildborn">
                             </div>
@@ -632,27 +549,28 @@
                                 <p><strong>Delivery Method&nbsp;</strong><span class="text-danger">*</span></p>
                                 <select class="shadow-sm form-select" style="font-family:Roboto, sans-serif;" name="delmeth">
                                     <option style="display:none"></option>
-                                    <option value="">Normal Delivery</option>
-                                    <option value="">Caesaren Delivery(C-Section)</option>
-                                    <option value="">Water Birth</option>
-                                    <option value="">Scheduled Induction Birth</option>
+                                    <option value="Normal Delivery">Normal Delivery</option>
+                                    <option value="Caesaren Delivery(C-Section)">Caesaren Delivery(C-Section)</option>
+                                    <option value="Water Birth">Water Birth</option>
+                                    <option value="Scheduled Induction Birth">Scheduled Induction Birth</option>
                                 </select>
                             </div>
                             <div class="col">
-                                <p><strong>Type of Attention at Delivery</strong>&nbsp;<span class="text-danger">*</span></p><select class="shadow-sm form-select" style="font-family:Roboto, sans-serif;" name="attendel">
+                                <p><strong>Type of Attention at Delivery</strong>&nbsp;<span class="text-danger">*</span></p>
+                                <select class="shadow-sm form-select" style="font-family:Roboto, sans-serif;" name="attendel">
                                     <optgroup label="Type of Attention at Delivery">
                                         <option style="display:none"></option>
-                                        <option value="">Institutional-Government</option>
-                                        <option value="">Institutional-Private/Non-Government</option>
-                                        <option value="">Doctor,Nurse or Trained Midwife</option>
-                                        <option value="">Traditional Birth Attendant</option>
-                                        <option value="">Relatives or Other</option>
+                                        <option value="Institutional-Government">Institutional-Government</option>
+                                        <option value="Institutional-Private/Non-Government">Institutional-Private/Non-Government</option>
+                                        <option value="Doctor,Nurse or Trained Midwife">Doctor,Nurse or Trained Midwife</option>
+                                        <option value="Traditional Birth Attendant">Traditional Birth Attendant</option>
+                                        <option value="Relatives or Other">Relatives or Other</option>
                                     </optgroup>
                                 </select>
                             </div>
                             <div class="col">
                                 <p><strong>Aadhar Document(pdf file)</strong>&nbsp;<span class="text-danger">*</span></p>
-                                <input class="shadow-sm form-control" type="file" required="" name="aadharproof" accept=".pdf" />
+                                <input class="shadow-sm form-control" type="file" required="" name="aadharproof" accept=".png,.jpg,.pdf" />
                             </div>
                         </div>
                     </div>
@@ -663,7 +581,7 @@
                                     <strong>Affidavit Document(pdf file)</strong>&nbsp;
                                     <span class="text-danger">*</span>
                                 </p>
-                                <input class="shadow-sm form-control" type="file" required="" name="affproof" accept=".pdf">
+                                <input class="shadow-sm form-control" type="file" required="" name="affproof">
                             </div>
                         </div>
                     </div>
@@ -683,66 +601,14 @@
             </form>
         </div>
     </section>
-
-    <script>
-        var select = document.getElementsByClassName("shadow-sm form-select selectState");
-        const states = [
-            "Andhra Pradesh",
-            "Arunachal Pradesh",
-            "Assam",
-            "Bihar",
-            "Chhattisgarh",
-            "Goa",
-            "Gujarat",
-            "Haryana",
-            "Himachal Pradesh",
-            "Jammu and Kashmir",
-            "Jharkhand",
-            "Karnataka",
-            "Kerala",
-            "Madhya Pradesh",
-            "Maharashtra",
-            "Manipur",
-            "Meghalaya",
-            "Mizoram",
-            "Nagaland",
-            "Odisha",
-            "Punjab",
-            "Rajasthan",
-            "Sikkim",
-            "Tamil Nadu",
-            "Telangana",
-            "Tripura",
-            "Uttarakhand",
-            "Uttar Pradesh",
-            "West Bengal",
-            "Andaman and Nicobar Islands",
-            "Chandigarh",
-            "Dadra and Nagar Haveli",
-            "Daman and Diu",
-            "Delhi",
-            "Lakshadweep",
-            "Puducherry"
-        ]
-        for (var x = 0; x < select.length; x++) {
-            for (var i = 0; i < states.length; i++) {
-                var opt = states[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                select[x].innerHTML += "<option value=\"" + opt + "\"></option>";
-                select[x].appendChild(el);
-                // console.log("added");
-            }
-        }
-    </script>
     <!-- End: Application Form -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bs-init.js"></script>
+    <script src="./assets/js/vanilla-zoom.js"></script>
+    <script src="./assets/js/theme.js"></script>
+    <script src="cities.js"></script>
+    <script src="./assets/js/new-app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="assets/js/vanilla-zoom.js"></script>
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/Application-Form.js"></script>
     <?php include 'insert_details.php' ?>;
 </body>
 
