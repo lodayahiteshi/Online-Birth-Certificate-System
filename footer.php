@@ -4,9 +4,9 @@
             <div class="col-sm-3">
                 <h5>Get started</h5>
                 <ul>
-                    <li><a href="index.php"> Home</a></li>
-                    <li><a href="login_form.php">Generate Certificate</a></li>
-                    <li><a href="user/certificate/applid.php">View /Download Certificate</a></li>
+                    <li><a href="./index.php"> Home</a></li>
+                    <li><a href="user/certificate/applid.php">Generate/Download Certificate</a></li>
+                    <li><a href="user/certificate/applid.php">View Certificate</a></li>
                 </ul>
             </div>
 
@@ -20,17 +20,17 @@
             <div class="col-sm-3">
                 <h5>Support</h5>
                 <ul>
-                    <li><a href="./user/faq.php">FAQ</a></li>
-                    <li><a href="# ">Help desk </a></li>
-                    <li><a href="# ">Forums </a></li>
+                    <li><a href="./faq.php">FAQ</a></li>
+                    <li><a href="#">Help desk </a></li>
+                    <li><a href="#">Forums </a></li>
                 </ul>
             </div>
             <div class="col-sm-3">
                 <h5>Legal</h5>
                 <ul>
-                    <li><a href="terms-and-conditions.php">Terms and Conditions </a></li>
-                    <li><a href="privacy-policy.php">Privacy Policy</a></li>
-                    <li><a href="# ">Refund Policy</a></li>
+                    <li><a href="./terms-and-conditions.php">Terms and Conditions </a></li>
+                    <li><a href="./privacy-policy.php">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
                 </ul>
             </div>
         </div>
