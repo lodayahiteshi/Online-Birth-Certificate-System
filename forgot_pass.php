@@ -4,8 +4,8 @@
 
 <head>
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="forgot_pass.css">
-    <link rel="icon" href="images/favicon.png" size="32*32" type="image/x-icon">
+    <link rel="stylesheet" href="user/assets/css/forgot_pass.css">
+    <link rel="icon" href="https://img.icons8.com/windows/64/000000/user.png" size="32*32" type="image/x-icon">
 </head>
 
 <body>

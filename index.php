@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Home</title>
-    <link rel="icon" href="assets/img/avatars/main.svg" type=" image/x-icon " />
+    <link rel="icon" href="user/assets/img/avatars/main.svg" type=" image/x-icon " />
     <link rel="manifest " href="manifest.json " />
-    <link rel="stylesheet " href="assets/bootstrap/css/bootstrap.min.css " />
-    <link rel="stylesheet " href="assets/fonts/simple-line-icons.min.css " />
+    <link rel="stylesheet " href="user/assets/bootstrap/css/bootstrap.min.css " />
+    <link rel="stylesheet " href="user/assets/fonts/simple-line-icons.min.css " />
     <link rel="stylesheet " href="assets/css/vanilla-zoom.min.css " />
     <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css " />
     <link rel="stylesheet " href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i " />
@@ -198,7 +198,7 @@
                 </div>
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <img class="img-thumbnail" src="assets/img/scenery/user.jpg " />
+                        <img class="img-thumbnail" src="user/assets/img/scenery/user.jpg " />
                     </div>
                     <div class="col-md-6">
                         <h3>USER PANEL</h3>
@@ -207,7 +207,7 @@
                                 If you wish to generate a birth - certicate, or regenerate a lost certificate or do necessary changes /modifications in the certificate, Login through the User Panel.
                             </p>
                         </div>
-                        <button class="btn btn-outline-primary btn-lg" type="button" onclick="window.location.href = 'login_form.php';">
+                        <button class="btn btn-outline-primary btn-lg" type="button" onclick="window.location.href = './login_form.php';">
                             Login Now
                         </button>
                     </div>
@@ -218,10 +218,10 @@
                                 If you are a government administrator, the you can view all the applications, the verified applications and the rejected applications.You must Login through the Admin Panel to manage the system.
                             </p>
                         </div>
-                        <button class="btn btn-outline-primary btn-lg" type="button" onclick="window.location.href = 'login_form.php';">Login Now</button>
+                        <button class="btn btn-outline-primary btn-lg" type="button" onclick="window.location.href = 'admin/login_form.php';">Login Now</button>
                     </div>
                     <div class="col-md-6">
-                        <img class="img-thumbnail" src="assets/img/scenery/admin.png " />
+                        <img class="img-thumbnail" src="user/assets/img/scenery/admin.png " />
                     </div>
                 </div>
             </div>

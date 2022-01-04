@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Features</title>
-    <link rel="icon" href="assets/img/avatars/icon.svg" type=" image/x-icon " />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="icon" href="user/assets/img/avatars/icon.svg" type=" image/x-icon " />
+    <link rel="stylesheet" href="user/assets/bootstrap/css/bootstrap.min.css" />
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i" />
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css" />
+    <link rel="stylesheet" href="user/assets/fonts/simple-line-icons.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
-    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css" />
+    <link rel="stylesheet" href="user/assets/css/vanilla-zoom.min.css" />
 </head>
 
 <body>

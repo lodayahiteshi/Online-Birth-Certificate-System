@@ -5,8 +5,8 @@
 
 <head>
     <title> Signup page </title>
-    <link rel="stylesheet" href="signup.css">
-    <link rel="icon" href="images/favicon.png" size="32*32" type="image/x-icon">
+    <link rel="stylesheet" href="user/assets/css/signup.css">
+    <link rel="icon" href="https://img.icons8.com/windows/64/000000/user.png"/>" size="32*32" type="image/x-icon">
 </head>
 
 <body>
