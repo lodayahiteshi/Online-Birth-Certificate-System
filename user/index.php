@@ -21,10 +21,9 @@
             <img src="https://previews.123rf.com/images/irinanaz/irinanaz1912/irinanaz191200052/134950243-sleeping-newborn-protection-and-care-for-baby-logo-in-a-linear-style-colored-vector-illustration-whi.jpg" class="logo">
             <ul class="main-menu">
                 <li><a href="#"></a></li>
-                <li><a href="../index.php">HOME</a></li>
-                <li><a href="#">STATES</a></li>
-                <li><a href="user/faq.php">FAQs</a></li>
-                <li><a href="#">CONTACT US</a></li>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="../states.php">STATES</a></li>
+                <li><a href="../faq.php">FAQs</a></li>
 
             </ul>
         </nav>
@@ -66,7 +65,8 @@
             </div>
         </div>
     </main>
-
+    <button class="btn1" onclick="window.location.href = 'certificate/applid.php';">View Certificate</button>
+    <button class="btn2" onclick="window.location.href = 'certificate/applid.php';">Download Certificate</button><br><br><br><br><br>
     <!----Footer ----->
     <footer>
         <?php include '../footer.php' ?>
