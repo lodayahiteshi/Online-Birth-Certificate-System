@@ -25,7 +25,7 @@ if (isset($_POST['applicid'])) {
 
 <body>
     <center>
-        <h2>Enter Application to Generate Birth Certificate</h2><br>
+        <h2>Enter Application to Generate/View Birth Certificate</h2><br>
         <form method="post">
             <label>Application Id</label>&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="number" name="apid" id="apid" placeholder="Enter Application Id" required /><br /><br />

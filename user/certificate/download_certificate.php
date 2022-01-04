@@ -19,6 +19,8 @@
 <head>
     <title>Download Certificate</title>
     <link rel="stylesheet" href="./download_certificate.css">
+    <link rel="stylesheet" type="text/css" href="./print.css" media="print"/>
+    <!--<script src="https://kit.fontawesome.com/70404aecc7.js" crossorigin="anonymous"></script>-->
 </head>
 
 <body>
@@ -43,7 +45,7 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         if ($row["status"] == "Verified") {
     ?>
-                            <div class="container">
+                            <div class="container" id="details">
                                 <p style="margin-left:15px;">Certificate Number: <?php echo $row['ApplicationID'] ?></p>
                                 <hr>
                                 <div class="content">
@@ -85,23 +87,22 @@
                                                 <td colspan="2">Remarks (if any): <?php echo $row['Remark'] ?></td>
 
                                             </tr>
-                                        <tbody>
+                                        </tbody>
                                     </table>
                                     <table>
+                                        <tbody>
                                         <tr>
-                                            <td>Date of Issue of Certificate: <?php echo $row['print_date'] ?></td>
+                                            <td>Date of Issue of Certificate: <?php echo $row['reportdate'] ?></td>
                                             <td>
-                                                <img src="seal.jpg" width="150px" height="90px" alt="seal">
+                                                <img src="seal.jpg" width="150px" height="90px" alt="seal" style="margin-top:-20%; margin-left:15%;">
                                                 <!-- <hr> -->
                                             </td>
                                             <!-- <td colspan="2"></td> -->
-                                            <td><img src="sign.jpeg" width="150px" height="80px" alt="signature"><br><br>
-                                                Signature of the Issuing Authority</td>
+                                            <td><img src="sign.jpeg" width="150px" height="80px" alt="signature" style="margin-top:-30%;">Signature of the Issuing Authority</td>
                                         </tr>
+                                        </tbody>
                                     </table>
                                     <!-- <h2 style="margin-top:60%;margin-right:13%;"><img src="seal.jpg" width="150px" height="90px" alt="seal"></h2> -->
-                                    <hr>
-                                    <p style="background-color:lightgray;text-align:right;">Ensure Registration of every Birth and Death</p>
                                 </div>
         <?php } else {
                             // echo "<script>alert('Your Application is:  , $row['status']')</script>";
@@ -118,6 +119,7 @@
             }
         }
     } ?>
+                             </div><br><br><br>
+      <center><button class="btn btn-primary" onclick="window.print();" id="print-btn">Download</button></center>
 </body>
-
 </html>
