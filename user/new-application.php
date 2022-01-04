@@ -516,6 +516,15 @@
                                 <p><strong>Reporting Date</strong>&nbsp;<span class="text-danger">*</span></p>
                                 <input class="shadow-sm form-control" type="date" required="" name="reportdate">
                             </div>
+                            <div class="col">
+                                <p>
+                                    <strong>Email Id</strong>&nbsp;
+                                    <span class="text-danger">*</span>
+                                </p>
+                                <input class="shadow-sm form-control" type="email" name="impemail" required="" >
+                                <p class="text-danger" style="font-family:monospace; font-size:15px;">(P.S. Enter the Email ID on which we should notify)</p>
+                            </div>
+                            <div class="col"></div>
                         </div>
                     </div>
                 </div>

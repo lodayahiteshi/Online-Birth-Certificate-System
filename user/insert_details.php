@@ -57,6 +57,7 @@ if (isset($_POST['submit'])) {
     $infpin = $_POST['infpin'];
     $infmobile = $_POST['infmobile'];
     $reportdate = $_POST['reportdate'];
+    $impemail = $_POST['impemail'];
     //other information
     $mage = $_POST['ageofmth'];
     $chborn = $_POST['numchildborn'];
@@ -66,12 +67,12 @@ if (isset($_POST['submit'])) {
     // if (isset($_POST['submit'])) {
     $fileName = $_FILES['aadharproof']['name'];
     $fileTmpName = $_FILES['aadharproof']['tmp_name'];
-    $path1 = "../aadharproof" . $fileName;
+    $path1 = "../aadharproof/" . $fileName;
     move_uploaded_file($fileTmpName, $path1);
 
     $afdFileName = $_FILES['affproof']['name'];
     $afdFileTmpName = $_FILES['affproof']['tmp_name'];
-    $path2 = "../affproof" . $afdFileName;
+    $path2 = "../affproof/" . $afdFileName;
     move_uploaded_file($afdFileTmpName, $path2);
 
     $appnumber = mt_rand(100000000, 999999999);
@@ -81,7 +82,7 @@ if (isset($_POST['submit'])) {
     $query3 = mysqli_query($con, "INSERT INTO fathers_info (fname,fmname,flname,faadhar,femail,fmobile,freligion,foccup,feducate) VALUES ('$fname','$fmname','$flname','$faadhar','$femail','$fmobile','$freligion','$foccup','$feducate')");
     $query4 = mysqli_query($con, "INSERT INTO mothers_info (mfname,mmidname,mlname,maadhar,memail,mmobile,mreligion,moccup,meducate) VALUES ('$mname','$mmidname','$mlname','$maadhar','$memail','$mmobile','$mreligion','$moccup','$meducate')");
     $query5 = mysqli_query($con, "INSERT INTO permanent_addr (place,perbldg,perhouse,perstreet,perlocal,perstate,perdistr,pervillage,perpin) VALUES ('$place','$perbldg','$perhouse','$perstreet','$perlocal','$perstate','$perdistr','$pervillage','$perpin')");
-    $query6 = mysqli_query($con, "INSERT INTO informants_info (inffname,infmname,inflname,infaddress,infpin,infmobile,reportdate) VALUES ('$inffname','$infmname','$inflname','$infaddress','$infpin','$infmobile','$reportdate')");
+    $query6 = mysqli_query($con, "INSERT INTO informants_info (inffname,infmname,inflname,infaddress,infpin,infmobile,reportdate,PrimaryEmail) VALUES ('$inffname','$infmname','$inflname','$infaddress','$infpin','$infmobile','$reportdate','$impemail')");
     $query7 = mysqli_query($con, "INSERT INTO other_info (mage,chborn,delmeth,aadharproof,affproof) VALUES('$mage','$chborn','$delmeth','$fileName','$afdFileName')");
     $query8 = mysqli_query($con, "INSERT INTO appid(ApplicationID,status) VALUES('$appnumber','Pending')");
 
