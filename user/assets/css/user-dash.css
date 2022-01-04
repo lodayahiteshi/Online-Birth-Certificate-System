@@ -146,6 +146,45 @@ main {
     color: whitesmoke;
 }
 
+
+
+.btn1{
+    background-color:dodgerblue;
+    border: 10px;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight:bold;
+    font-family:Yu Gothic UI;
+    margin: 4px 4px;  
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+     float:left;
+     width:250px;  
+}
+
+.btn1 {border-radius: 15px;}
+
+.btn2{
+    background-color:dodgerblue;
+    border: 10px;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight:bold;
+    font-family:Yu Gothic UI;
+    margin-left: 10%;  
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+     float:left;
+     width:250px;  
+}
+.btn2 {border-radius: 15px;}
+
 @media only screen and (max-width: 60rem) {
     body {
         padding: 3rem;
