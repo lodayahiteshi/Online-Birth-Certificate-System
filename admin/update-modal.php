@@ -10,7 +10,7 @@
             <div class="modal-body">
                 <table class="table table-bordered table-hover data-tables">
 
-                    <form method="post" name="submit">
+                    <form method="POST" name="submit" name="approve">
 
                         <tr>
                             <th>Remark :</th>
@@ -23,7 +23,7 @@
                             <th>Status :</th>
                             <td>
 
-                                <select name="status" class="form-control wd-450" required="true">
+                                <select name="status" id="status" class="form-control wd-450" required="true">
                                     <option value="Verified" selected="true">Verified</option>
                                     <option value="Rejected">Rejected</option>
                                 </select>

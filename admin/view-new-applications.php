@@ -103,10 +103,11 @@
                                                         $vid = $row['userID'];
                                                         $updated_remark = $_POST['remark'];
                                                         $updated_status = $_POST['status'];
+                                                        
                                                         $updations = mysqli_query($con, "UPDATE appid SET status='{$updated_status}', remark='{$updated_remark}' WHERE userID={$vid}");
                                                         if ($updations) {
                                                             echo '<script>alert("Remark has been updated")</script>';
-                                                            echo "<script>window.location.href ='./view-new-applications.php'</script>";
+                                                           echo "<script>window.location.href ='./view-new-applications.php'</script>";
                                                         } else {
                                                             echo '<script>alert("Error")</script>';
                                                         }
@@ -127,7 +128,7 @@
             </div>
 
             <?php include 'update-modal.php' ?>
-
+            
 
             <footer class="footer footer-black footer-white">
                 <div class="container-fluid">
