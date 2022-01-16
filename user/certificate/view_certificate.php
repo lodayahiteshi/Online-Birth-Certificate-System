@@ -9,10 +9,10 @@ if (strlen($_SESSION['username'] == 0)) {
     <html>
 
     <head>
-        <title>Download Certificate</title>
+        <title>View Certificate</title>
         <link rel="stylesheet" href="../assets/css/download_certificate.css">
         <link rel="stylesheet" type="text/css" href="../assets/css/print.css" media="print" />
-        <script src="https://kit.fontawesome.com/70404aecc7.js" crossorigin="anonymous"></script>
+        <!--<script src="https://kit.fontawesome.com/70404aecc7.js" crossorigin="anonymous"></script>-->
     </head>
 
     <body>
@@ -20,21 +20,22 @@ if (strlen($_SESSION['username'] == 0)) {
         include '../database_connect.php';
         if (isset($_GET['app_id'])) {
             $apid = $_GET['app_id'];
-
+            // echo $apid;
             $idd = "SELECT userID FROM appid WHERE ApplicationID=$apid";
             $result1 = mysqli_query($con, $idd);
             if ($result1) {
                 if ($row1 = mysqli_fetch_assoc($result1)) {
+                    // echo "query 1 success \n " . $row1['userID'];
                     $id = $row1['userID'];
 
                     $query = "SELECT * FROM info_of_child ch, appid ap, place_of_birth pob, fathers_info finfo, mothers_info minfo, permanent_addr peraddr, informants_info inf WHERE ch.id=$id AND ap.userID=$id AND pob.id=$id AND finfo.id=$id AND minfo.id=$id AND peraddr.id=$id AND inf.id=$id";
-
+                    // echo $query . "<br />";
                     $result = mysqli_query($con, $query);
-                    $name = "";
+                    // echo $result;
+
                     if ($result) {
                         while ($row = mysqli_fetch_assoc($result)) {
                             if ($row["status"] == "Verified") {
-                                $name = "Birth Certificate " . $row['firstname'] . " " . $row['lastname'];
         ?>
                                 <div class="container" id="details">
                                     <p style="margin-left:15px;">Certificate Number: <?php echo $row['ApplicationID'] ?></p>
@@ -56,6 +57,8 @@ if (strlen($_SESSION['username'] == 0)) {
                                                 <tr>
                                                     <td>Name of Child: <?php echo $row['firstname'] . " " . $row['midname'] . " " . $row['lastname'] ?></td>
                                                     <td>Sex: <?php echo $row['gender'] ?></td>
+                                                    </tryle=>
+                                                    <!-- <tr></tr> -->
                                                 <tr>
                                                     <td>Date of Birth: <?php echo $row['dob'] ?></td>
                                                     <td>Place of Birth: <?php echo $row['house_no'] . ", " . $row['bldg_no_name'] . ", " . $row['street_lane'] . ", " . $row['village_town'] . ", " . $row['district'] . ", " . $row['pstate'] ?></td>
@@ -81,21 +84,25 @@ if (strlen($_SESSION['username'] == 0)) {
                                         <table>
                                             <tbody>
                                                 <tr>
-                                                    <td>Date of Issue of Certificate: <?php echo date('Y-m-d') ?></td>
+                                                    <td>Date of Issue of Certificate: <?php echo $row['reportdate'] ?></td>
                                                     <td>
                                                         <img src="../assets/img/avatars/seal.jpg" width="150px" height="90px" alt="seal" style="margin-top:-20%; margin-left:15%;">
-
+                                                        <!-- <hr> -->
                                                     </td>
+                                                    <!-- <td colspan="2"></td> -->
                                                     <td><img src="../assets/img/avatars/sign.jpeg" width="150px" height="80px" alt="signature" style="margin-top:-30%;">Signature of the Issuing Authority</td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <!-- <h2 style="margin-top:60%;margin-right:13%;"><img src="seal.jpg" width="150px" height="90px" alt="seal"></h2> -->
                                     </div>
             <?php } else {
+                                // echo "<script>alert('Your Application is:  , $row['status']')</script>";
                                 echo '<script type="text/javascript">
                             alert("Your Application is  ' . $row['status'] . '");
                             window.location.replace("applid.php");
                             </script>';
+                                // header("Location:./user-dash.php");
                             }
                         }
                     } else {
@@ -104,8 +111,6 @@ if (strlen($_SESSION['username'] == 0)) {
                 }
             }
         } ?>
-                                </div><br />
-                                <center><button class="btn" onclick="document.title='<?php echo $name ?>'; window.print();" id="print-btn"><i class="fas fa-download"></i> Download</button></center>
     </body>
 
     </html>

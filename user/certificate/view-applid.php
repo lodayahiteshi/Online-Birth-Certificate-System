@@ -17,7 +17,7 @@ if (strlen($_SESSION['username'] == 0)) {
         $query_run = mysqli_query($con, $s);
         if (mysqli_num_rows($query_run) > 0) {
             $_SESSION['apid'] = $apid;
-            header("location:download_certificate.php?app_id=$apid");
+            header("location:view_certificate.php?app_id=$apid");
         } else {
             echo '<script type=text/javascript> alert("Invalid Application ID") </script>';
         }
@@ -32,7 +32,7 @@ if (strlen($_SESSION['username'] == 0)) {
 
     <body>
         <center>
-            <h2>Enter Application ID to Download Birth Certificate</h2><br>
+            <h2>Enter Application ID to View Birth Certificate</h2><br>
             <form method="post">
                 <label>Application Id</label>&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="number" name="apid" id="apid" placeholder="Enter Application Id" required /><br /><br />
