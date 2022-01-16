@@ -1,5 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+
 <head>
+    <title>Terms & Conditions</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css" />
     <style>
+        .details {
+            padding: 0px 40px;
+        }
+
         [data-custom-class='body'],
         [data-custom-class='body'] * {
             background: transparent !important;
@@ -42,16 +51,24 @@
 
         [data-custom-class='link'],
         [data-custom-class='link'] * {
-            color: #3030F1 !important;
+            color: dodgerblue !important;
             font-size: 14px !important;
             font-family: Arial !important;
             word-break: break-word !important;
+            text-decoration: none;
+            line-height: 35px;
+        }
+
+        .navlinks {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
         }
     </style>
 </head>
 
 <body>
-    <div data-custom-class="body">
+    <?php include "navbar.php" ?><br><br><br><br><br><br>
+    <div data-custom-class="body" class="details">
         <div align="center" style="text-align: left; line-height: 1;">
             <div align="center" class="MsoNormal" style="text-align: left; line-height: 150%;">
                 <div align="center" class="MsoNormal" style="text-align:center;line-height:150%;"><a name="_2cipo4yr3w5d"></a>
@@ -59,12 +76,14 @@
                         <div align="center" class="MsoNormal" style="line-height: 150%;"><a name="_gm5sejt4p02f"></a>
                             <div align="center" class="MsoNormal" data-custom-class="title" style="text-align: left; line-height: 1.5;"><strong><span style="line-height: 22.5px; font-size: 26px;">
                                         <bdt class="block-component"></bdt>
-                                        <bdt class="question">TERMS AND CONDITIONS</bdt>
+                                        <center>
+                                            <bdt class="question">TERMS AND CONDITIONS</bdt>
+                                        </center>
                                         <bdt class="statement-end-if-in-editor"></bdt>
                                     </span></strong></div>
                             <div align="center" class="MsoNormal" style="line-height: 22.5px; text-align: left;"><a name="_7m5b3xg56u7y"></a></div>
                             <div align="center" class="MsoNormal" data-custom-class="subtitle" style="text-align: left; line-height: 22.5px;"><br></div>
-                            <div align="center" class="MsoNormal" data-custom-class="subtitle" style="text-align: left; line-height: 1.5;"><span style="color: rgb(89, 89, 89); font-size: 14.6667px; text-align: justify;"><strong>Last updated <bdt class="block-container question question-in-editor" data-id="e2088df5-25ea-aec9-83d4-6284f5a7e043" data-type="question">December 29, 2021</bdt></strong></span></div>
+                            <div align="center" class="MsoNormal" data-custom-class="subtitle" style="text-align: center; line-height: 1.5;"><span style="color: rgb(89, 89, 89); font-size: 14.6667px; text-align: center;"><strong>In using this website you are deemed to have read and agreed to <bdt class="block-container question question-in-editor" data-id="e2088df5-25ea-aec9-83d4-6284f5a7e043" data-type="question">the following terms and conditions </bdt></strong></span></div>
                         </div>
                     </div>
                     <div align="center" class="MsoNormal" style="line-height: 17.25px; text-align: left;"><br></div>
@@ -72,77 +91,35 @@
                     <div align="center" class="MsoNormal" style="line-height: 17.25px; text-align: left;"><br></div>
                     <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1">TABLE OF CONTENTS</span></strong></span></span></span></div>
                     <div style="line-height: 1.5; text-align: left;"><br></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#agreement"><span style="color: rgb(89, 89, 89);">1. AGREEMENT TO TERMS</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#ip"><span style="color: rgb(89, 89, 89);">2. INTELLECTUAL PROPERTY RIGHTS</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#userreps">3. USER REPRESENTATIONS</a></span></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#userreg"><span style="color: rgb(89, 89, 89);">
-                                    <bdt data-type="conditional-block">
-                                        <bdt class="block-component" data-record-question-key="user_account_option" data-type="statement"><span style="font-size: 15px;"></span></bdt>
-                                    </bdt>4. USER REGISTRATION
-                                </span></a></span>
-                        <bdt class="statement-end-if-in-editor" data-type="close"><span style="font-size: 15px;"></span></bdt>
+                    <div class="navlinks">
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#agreement"><span style="color: rgb(89, 89, 89);">1. AGREEMENT TO TERMS</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#ip"><span style="color: rgb(89, 89, 89);">2. INTELLECTUAL PROPERTY RIGHTS</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#userreps">3. USER REPRESENTATIONS</a></span></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#userreg"><span style="color: rgb(89, 89, 89);">
+                                        <bdt data-type="conditional-block">
+                                            <bdt class="block-component" data-record-question-key="user_account_option" data-type="statement"><span style="font-size: 15px;"></span></bdt>
+                                        </bdt>4. USER REGISTRATION
+                                    </span></a></span>
+                            <bdt class="statement-end-if-in-editor" data-type="close"><span style="font-size: 15px;"></span></bdt>
+                        </div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#prohibited"><span style="color: rgb(89, 89, 89);">5. PROHIBITED ACTIVITIES</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#ugc"><span style="color: rgb(89, 89, 89);">6. USER GENERATED CONTRIBUTIONS</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#license">7. CONTRIBUTION LICENSE</a></span></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#submissions">8. SUBMISSIONS</a></span></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#sitemanage">9. SITE MANAGEMENT</a></span></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#terms"></a><a data-custom-class="link" href="#terms"><span style="color: rgb(89, 89, 89);">10. TERM AND TERMINATION</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#modifications"><span style="color: rgb(89, 89, 89);">11. MODIFICATIONS AND INTERRUPTIONS</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#law"><span style="color: rgb(89, 89, 89);">12. GOVERNING LAW</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#disputes"><span style="color: rgb(89, 89, 89);">13. DISPUTE RESOLUTION</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#corrections">14. CORRECTIONS</a></span></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#disclaimer"><span style="color: rgb(89, 89, 89);">15. DISCLAIMER</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#liability"><span style="color: rgb(89, 89, 89);">16. LIMITATIONS OF LIABILITY</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#indemnification">17. INDEMNIFICATION</a></span></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#userdata"><span style="color: rgb(89, 89, 89);">18. USER DATA</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#electronic"><span style="color: rgb(89, 89, 89);">19. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, <br>AND SIGNATURES</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#misc"><span style="color: rgb(89, 89, 89);">20. MISCELLANEOUS</span></a></span></div>
+                        <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#contact">21. CONTACT US</a></span></span></div>
                     </div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#prohibited"><span style="color: rgb(89, 89, 89);">5. PROHIBITED ACTIVITIES</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#ugc"><span style="color: rgb(89, 89, 89);">6. USER GENERATED CONTRIBUTIONS</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#license">7. CONTRIBUTION LICENSE</a></span></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#reviews"><span style="color: rgb(89, 89, 89);">
-                                    <bdt class="block-container if" data-type="if" id="a378120a-96b1-6fa3-279f-63d5b96341d3">
-                                        <bdt data-type="conditional-block">
-                                            <bdt class="block-component" data-record-question-key="review_option" data-type="statement"><span style="font-size: 15px;"></span></bdt>
-                                </span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#mobile"><span style="color: rgb(89, 89, 89);">
-                                    <bdt class="block-container if" data-type="if" id="c954892f-02b9-c743-d1e8-faf0d59a4b70">
-                                        <bdt data-type="conditional-block">
-                                            <bdt class="block-component" data-record-question-key="mobile_app_option" data-type="statement"><span style="font-size: 15px;"></span></bdt>
-                                </span></a></span></div>
-                    <div align="center" style="text-align: left;"><span style="font-size: 15px;">
-                            <bdt class="block-component">
-                        </span></bdt></span></a></span></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#submissions">8. SUBMISSIONS</a></span></span></div>
-                    <div align="center" style="text-align: left;"><span style="font-size: 15px;">
-                            <bdt class="block-component">
-                        </span></bdt></span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#advertisers"><span style="color: rgb(89, 89, 89);">
-                                    <bdt class="block-container if" data-type="if" id="14038561-dad7-be9d-370f-f8aa487b2570">
-                                        <bdt data-type="conditional-block">
-                                            <bdt class="block-component" data-record-question-key="advertiser_option" data-type="statement"><span style="font-size: 15px;"></span></bdt>
-                                </span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#sitemanage">9. SITE MANAGEMENT</a></span></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#privacypolicy1"><span style="color: rgb(89, 89, 89);">
-                                    <bdt class="block-container if" data-type="if" id="bdd90fa9-e664-7d0b-c352-2b8e77dd3bb4">
-                                        <bdt data-type="conditional-block">
-                                            <bdt class="block-component" data-record-question-key="privacy_policy_option" data-type="statement"><span style="font-size: 15px;">
-                                                    <bdt class="block-container if" data-type="if" id="87a7471d-cf82-1032-fdf8-601d37d7b017">
-                                                        <bdt data-type="conditional-block">
-                                                            <bdt class="block-component" data-record-question-key="privacy_policy_followup" data-type="statement" style="font-size: 14.6667px;"><span style="font-size: 15px;"></span></bdt>
-                                                </span></a><a data-custom-class="link" href="#privacypolicy"></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#dmca"><span style="color: rgb(89, 89, 89);">
-                                    <bdt class="block-component">
-                                        <bdt class="block-component">
-                                </span></bdt>
-                                </bdt></span></bdt>
-                        </bdt></span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#copyright1"><span style="color: rgb(89, 89, 89);">
-                                    <bdt class="block-component">
-                                        <bdt class="block-component"></bdt>
-                                        <bdt class="block-component"></bdt>
-                                        <bdt class="statement-end-if-in-editor"></bdt>
-                    </div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#terms"></a><a data-custom-class="link" href="#terms"><span style="color: rgb(89, 89, 89);">10. TERM AND TERMINATION</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#modifications"><span style="color: rgb(89, 89, 89);">11. MODIFICATIONS AND INTERRUPTIONS</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#law"><span style="color: rgb(89, 89, 89);">12. GOVERNING LAW</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#disputes"><span style="color: rgb(89, 89, 89);">13. DISPUTE RESOLUTION</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#corrections">14. CORRECTIONS</a></span></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#disclaimer"><span style="color: rgb(89, 89, 89);">15. DISCLAIMER</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#liability"><span style="color: rgb(89, 89, 89);">16. LIMITATIONS OF LIABILITY</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#indemnification">17. INDEMNIFICATION</a></span></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#userdata"><span style="color: rgb(89, 89, 89);">18. USER DATA</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#electronic"><span style="color: rgb(89, 89, 89);">19. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</span></a></span></div>
-                    <div class="MsoNormal" style="line-height: 1.5; text-align: left;"><span style="font-size:11.0pt;line-height:115%;font-family:Arial,Calibri; color:#595959;color:text1;">
-                            <bdt class="block-component">
-                        </span></bdt></span></a></span></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><a data-custom-class="link" href="#misc"><span style="color: rgb(89, 89, 89);">20. MISCELLANEOUS</span></a></span></div>
-                    <div style="line-height: 1.5; text-align: left;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><a data-custom-class="link" href="#contact">21. CONTACT US</a></span></span></div>
                     <div style="line-height: 1.5; text-align: left;"><br></div>
                     <div style="line-height: 1.5; text-align: left;"><br></div>
                 </div>
@@ -843,7 +820,7 @@ Calibri;color:#595959;color:text1;">In order to resolve a complaint regarding th
                                                     <bdt class="block-component"></bdt>
                                                 </span></strong></span></div>
                         <div class="MsoNormal" data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px; line-height: 115%; font-family:Arial;  color: rgb(89, 89, 89);">
-                                <bdt class="block-container question question-in-editor" data-id="fdc2b5b8-c95f-244b-23a7-287f82541348" data-type="question"><strong>sanika.dk@somaiya.edu</strong></bdt>
+                                <bdt class="block-container question question-in-editor" data-id="fdc2b5b8-c95f-244b-23a7-287f82541348" data-type="question"><strong><a href="mailto:info.birthcertificate.services@gmail.com" style="text-decoration:none;">Mail: info.birthcertificate.services@gmail.com</a></strong></bdt>
                             </span></div>
                     </div>
                     <style>
@@ -865,6 +842,9 @@ Calibri;color:#595959;color:text1;">In order to resolve a complaint regarding th
                     </style>
                 </div>
             </div>
+        </div>
+    </div><br><br>
 </body>
+<?php include "footer.php" ?>
 
 </html>
