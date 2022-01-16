@@ -23,8 +23,7 @@ include 'userregdb.php'; ?>
             <p><span><input type="checkbox" required></span> agree to the terms of services </p>
             <button input type="submit" name="sign" class="signup-btn">Sign Up </button>
             <hr>
-            <button input type="button" class="gsign-btn">Sign up with Google </button>
-            <p> Do you have an account ? <a href="login_form.php"> Login </a></p>
+            <p> Already have an account ? <a href="login_form.php"> Login </a></p>
         </form>
     </div>
     <?php include 'registration.php'; ?>

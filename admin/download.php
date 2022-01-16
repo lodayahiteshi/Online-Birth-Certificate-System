@@ -6,8 +6,9 @@ if (!empty($_GET['aadhar_id'])) {
         $sql = "SELECT * FROM other_info WHERE id= $id";
         $result = mysqli_query($con, $sql);
         $file = mysqli_fetch_assoc($result);
-        $fileName = $file['aadharproof'];
+        $fileName = $file['aadharproof'];   //fetching file name
         $filePath = '../aadharproof/' . $file['aadharproof'];
+        //fetching the file from database and gets downloaded
 
         if (file_exists($filePath)) {
             //define header
@@ -31,8 +32,9 @@ if (!empty($_GET['aff_id'])) {
         $sql = "SELECT * FROM other_info WHERE id= $id";
         $result = mysqli_query($con, $sql);
         $file = mysqli_fetch_assoc($result);
-        $fileName = $file['affproof'];
+        $fileName = $file['affproof'];  //fetching file name
         $filePath = '../affproof/' . $file['affproof'];
+        //fetching the file from database and gets downloaded
 
         if (file_exists($filePath)) {
             //define header
@@ -51,6 +53,4 @@ if (!empty($_GET['aff_id'])) {
     }
 }
 ?>
-
-
 <!-- <html> -->

@@ -5,14 +5,14 @@
 <link href="./assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
 <div class="sidebar" data-color="white" data-active-color="danger" id="sidebar-collapse">
     <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="./index.php" class="simple-text logo-mini">
             <div class="logo-image-small">
                 <img src="./assets/img/logo-small.png">
             </div>
-            <!-- <p>CT</p> -->
         </a>
-        <a href="#" class="simple-text logo-normal">
-            admin 1
+        <!-- It allows us to identify the client that is accessing the web-application -->
+        <a href="./index.php" class="simple-text logo-normal">
+            <?php echo $_SESSION['username1'] ?>
         </a>
     </div>
     <div class="sidebar-wrapper" id="myDIV">
@@ -54,20 +54,6 @@
                 </a>
             </li>
 
-            <li>
-                <a href="./user.php">
-                    <i class="nc-icon nc-single-02"></i>
-                    <p>User Profile</p>
-                </a>
-            </li>
         </ul>
-        <script>
-            var a = document.querySelectorAll(".nav a");
-            for (var i = 0, length = a.length; i < length; i++) {
-                a[i].onclick = function() {
-                    this.parentNode.classList.add('active');
-                };
-            }
-        </script>
     </div>
 </div>

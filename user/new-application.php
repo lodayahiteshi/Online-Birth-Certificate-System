@@ -22,16 +22,17 @@ if (strlen($_SESSION['username'] == 0)) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <script src="cities.js"></script>
+        <script src="./assets/js/cities.js"></script>
         <script src="./assets/js/new-app.js"></script>
     </head>
 
     <body>
         <!-- Start: Application Form -->
         <section>
-            <h1 class="text-center" style="font-family:Cormorant Garamond, serif; font-size:30px">Application form</h1><br>
+            <h1 class="text-center" style="font-family:Cormorant Garamond, serif; font-size:30px; padding-top:30px;">Application form</h1><br>
             <div class="container">
                 <form id="application-form" method="POST" enctype="multipart/form-data" name="appForm">
+
                     <!-- Information of Child -->
                     <div class="form-section">
                         <div class="section-head">
@@ -64,10 +65,10 @@ if (strlen($_SESSION['username'] == 0)) {
                                         <option value="Transgender">Transgender</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-4">
-                                    <p><strong>Aadhar Number (if any)</strong>&nbsp;</p><input class="shadow-sm form-control" type="number" required="no" name="aadhar">
+                                <div class="col-lg-3">
+                                    <p><strong>Aadhar Number (if any)</strong>&nbsp;</p><input class="shadow-sm form-control" type="number" name="aadhar">
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-3">
                                     <p><strong>Weight(kg)</strong>&nbsp;<span class="text-danger">*</span></p><input class="shadow-sm form-control" type="number" step=".01" required="" name="cweight">
                                 </div>
                             </div>
@@ -135,15 +136,14 @@ if (strlen($_SESSION['username'] == 0)) {
                         </div>
                         <div class="form-group mb-3">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <p>
                                         <strong>Village/Town</strong>&nbsp;
                                         <span class="text-danger">*</span>
                                     </p>
-                                    <!-- <input class="shadow-sm form-control" type="text" required="" name="pobvillage"> -->
                                     <select class="shadow-sm form-select city" id="city" type="text" required="" name="pobvillage"></select>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
 
                                     <p><strong>Pin Code&nbsp;</strong><span class="text-danger">*</span></p>
                                     <input class="shadow-sm form-control" type="number" required="" name="pobpin">
@@ -204,7 +204,7 @@ if (strlen($_SESSION['username'] == 0)) {
                                         <span class="text-danger">*</span>
                                     </p>
                                     <input class="shadow-sm form-control" type="number" name="fmobile" required="" />
-                                    <p class="text-danger" style="font-family:monospace; font-size:15px;">(P.S. Enter the Mobile Number which is registered in your Aadhar Card)</p>
+                                    <p class="text-danger" style="font-family:monospace; font-size:15px;">(P.S. Enter the Mobile Number which is registered on your Aadhar Card)</p>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +288,7 @@ if (strlen($_SESSION['username'] == 0)) {
                                         <span class="text-danger">*</span>
                                     </p>
                                     <input class="shadow-sm form-control" type="number" name="mmobile" required="" />
-                                    <p class="text-danger" style="font-family:monospace; font-size:15px;">(P.S. Enter the Mobile Number which is registered in your Aadhar Card)</p>
+                                    <p class="text-danger" style="font-family:monospace; font-size:15px;">(P.S. Enter the Mobile Number which is registered on your Aadhar Card)</p>
                                 </div>
                             </div>
                         </div>
@@ -331,11 +331,7 @@ if (strlen($_SESSION['username'] == 0)) {
                                     <input type="radio" name="place" value="In India" required>
                                     <label for="in india">In India </label>
                                 </div>
-                                <div class="col">
-                                    <input type="radio" name="place" value="Outside India" required>
-                                    <label for="outside india">Outside India </label>
-                                </div>
-                                <div class="col"></div>
+
                             </div><br>
                             <div class="form-group mb-3">
                                 <div class="row">
@@ -378,7 +374,7 @@ if (strlen($_SESSION['username'] == 0)) {
                         </div>
                         <div class="form-group mb-3">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <p>
                                         <strong>Village/Town</strong>&nbsp;
                                         <span class="text-danger">*</span>
@@ -387,7 +383,7 @@ if (strlen($_SESSION['username'] == 0)) {
                                     <select class="shadow-sm form-select city" id="city" type="text" required="" name="bchvillage"></select>
 
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
 
                                     <p><strong>Pin Code&nbsp;</strong><span class="text-danger">*</span></p>
                                     <input class="shadow-sm form-control" type="number" required="" name="bchpin">
@@ -409,11 +405,8 @@ if (strlen($_SESSION['username'] == 0)) {
                                     <input type="radio" name="place1" value="In India" required="">
                                     <label for="in india">In India </label>
                                 </div>
-                                <div class="col">
-                                    <input type="radio" name="place1" value="Outside India" required="">
-                                    <label for="outside india">Outside India </label>
-                                </div>
-                            </div><br>
+
+                            </div><br />
                             <div class="row">
                                 <div class="col">
                                     <!-- <input type="checkbox" name="check" value="check permanent address"> -->
@@ -463,16 +456,15 @@ if (strlen($_SESSION['username'] == 0)) {
                         </div>
                         <div class="form-group mb-3">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <p>
                                         <strong>Village/Town</strong>&nbsp;
                                         <span class="text-danger">*</span>
                                     </p>
-                                    <!-- <input class="shadow-sm form-control" type="text" required="" name="pervillage"> -->
                                     <select class="shadow-sm form-select city" id="city" type="text" required="" name="pervillage"></select>
 
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <p><strong>Pin Code&nbsp;</strong><span class="text-danger">*</span></p>
                                     <input class="shadow-sm form-control" type="number" required="" name="perpin">
                                 </div>
@@ -518,27 +510,17 @@ if (strlen($_SESSION['username'] == 0)) {
                                         <span class="text-danger">*</span>
                                     </p>
                                     <input class="shadow-sm form-control" type="number" required="" name="infmobile" />
-                                    <p class="text-danger" style="font-family:monospace; font-size:15px;">(P.S. Enter the Mobile Number which is registered in your Aadhar Card)</p>
-                                </div><br>
-                                <div class="col-lg-4">
+                                </div><br />
+                                <div class="col-lg-6">
                                     <p><strong>Reporting Date</strong>&nbsp;<span class="text-danger">*</span></p>
                                     <input class="shadow-sm form-control" type="date" required="" name="reportdate">
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <p><strong>Email ID</strong>&nbsp;<span class="text-danger">*</span></p>
                                     <input class="shadow-sm form-control" type="email" required="" name="impemail">
                                     <p class="text-danger" style="font-family:monospace; font-size:15px;">(P.S. Enter the Email ID on which we should notify)</p>
                                 </div>
                             </div>
-                            <div class="col">
-                                <p>
-                                    <strong>Email Id</strong>&nbsp;
-                                    <span class="text-danger">*</span>
-                                </p>
-                                <input class="shadow-sm form-control" type="email" name="impemail" required="" >
-                                <p class="text-danger" style="font-family:monospace; font-size:15px;">(P.S. Enter the Email ID on which we should notify)</p>
-                            </div>
-                            <div class="col"></div>
                         </div>
                     </div>
                     <br>
@@ -591,19 +573,19 @@ if (strlen($_SESSION['username'] == 0)) {
                                     </select>
                                 </div>
                                 <div class="col-lg-4">
-                                    <p><strong>Aadhar Document(pdf file)</strong>&nbsp;<span class="text-danger">*</span></p>
+                                    <p><strong>Aadhar Document (pdf file)</strong>&nbsp;<span class="text-danger">*</span></p>
                                     <input class="shadow-sm form-control" type="file" required="" name="aadharproof" accept=".png,.jpg,.pdf" />
                                 </div>
                             </div>
                         </div>
                         <div class="form-group mb-3">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col">
                                     <p>
-                                        <strong>Affidavit Document(pdf file)</strong>&nbsp;
-                                        <span class="text-danger">*</span>
+                                        <strong>Affidavit Document (pdf file) (optional)</strong>&nbsp;
                                     </p>
-                                    <input class="shadow-sm form-control" type="file" required="" name="affproof">
+                                    <input class="shadow-sm form-control" type="file" name="affproof">
+                                    <p class="text-danger" style="font-family:monospace; font-size:15px;">(P.S. Applying a year after child's birth? Attach the affiduvate doc stating the reason behind delay. If not done so, your application will be rejected)
                                 </div>
                             </div>
                         </div>
@@ -623,14 +605,15 @@ if (strlen($_SESSION['username'] == 0)) {
                 </form>
             </div>
         </section>
+
         <!-- End: Application Form -->
         <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="./assets/js/bs-init.js"></script>
         <script src="./assets/js/vanilla-zoom.js"></script>
-        <script src="./assets/js/theme.js"></script>
-        <script src="cities.js"></script>
+        <script src="./assets/js/cities.js"></script>
         <script src="./assets/js/new-app.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+
+        <!-- Insert Details into Database  -->
         <?php include 'insert_details.php' ?>;
     </body>
 

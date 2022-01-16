@@ -92,10 +92,8 @@ if (isset($_POST['submit'])) {
         </script>';
     } else {
         echo '<script type="text/javascript">
-        alert("\nRecord Added Successfully\n Your Application ID is: ' . $appnumber . '");
+        alert("\nRecord Added Successfully\n Your Application ID is: ' . $appnumber . '\n Save this Application ID carefully. \nYou will need this to Download your Certificate");
+        window.location.replace("./index.php")
         </script>';
-        // header("Location:./user-dash.php");  
     }
 }
-
-// echo '<script type="text/javascript">alert("Data has been submitted to ' . $to . '");</script>';

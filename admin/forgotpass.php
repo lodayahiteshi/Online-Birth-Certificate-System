@@ -27,4 +27,3 @@ if (isset($_POST['reset'])) {
         echo '<script type="text/javascript"> alert("Error") </script>';
     }
 }
-?>

@@ -1,10 +1,13 @@
-<?php include 'admindb_connect.php'; ?>
+<?php
+session_start();
+error_reporting(0);
+include 'admindb_connect.php'; ?>
 <!doctype html>
 <html>
 
 <head>
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="assets/css/forgot_pass.css">
+    <link rel="stylesheet" href="./assets/css/forgot_pass.css">
     <link rel="icon" href="images/favicon.png" size="32*32" type="image/x-icon">
 </head>
 

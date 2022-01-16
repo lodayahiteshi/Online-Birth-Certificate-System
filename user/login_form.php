@@ -1,7 +1,8 @@
 <?php
 session_start();
 error_reporting(0);
-include 'userregdb.php'; ?>
+include 'userregdb.php';
+?>
 
 <!doctype html>
 <html>
@@ -26,7 +27,7 @@ include 'userregdb.php'; ?>
         </form>
     </div>
     <?php include 'validation.php'; ?>
-    <p style="position:fixed; right:750px; top:580px; padding:5px"><a href="signup.php">Already have account? SignUp</a></p>
+    <p style="position:fixed; right:750px; top:580px; padding:5px"><a href="signup.php">Don't have account? SignUp</a></p>
     <p style="position:fixed; right:570px; top:580px; padding:5px"><a href="forgot_pass.php">Forgot Password?</a></p>
 </body>
 

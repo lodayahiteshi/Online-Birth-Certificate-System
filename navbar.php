@@ -9,8 +9,8 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="features.php">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="login_form.php">User</a></li>
-                <li class="nav-item"><a class="nav-link" href="admin/login_form.php">ADMIN</a></li>
+                <li class="nav-item"><a class="nav-link" href="./user/index.php">User</a></li>
+                <li class="nav-item"><a class="nav-link" href="./admin/index.php">ADMIN</a></li>
             </ul>
         </div>
     </div>

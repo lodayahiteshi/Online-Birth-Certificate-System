@@ -1,13 +1,15 @@
 <?php
 session_start();
-include 'admindb_connect.php'; ?>
+error_reporting(0);
+include 'admindb_connect.php';
+?>
 
 <!doctype html>
 <html>
 
 <head>
     <title>Login Form</title>
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="icon" href="images/favicon.png" size="32*32" type="image/x-icon">
 </head>
 
@@ -25,7 +27,7 @@ include 'admindb_connect.php'; ?>
         </form>
     </div>
     <?php include 'validation.php'; ?>
-    <p style="position:fixed; right:750px; top:580px; padding:5px"><a href="Signup.php">Dont have account? SignUp</a></p>
+    <p style="position:fixed; right:750px; top:580px; padding:5px"><a href="signup.php">Don't have account? SignUp</a></p>
     <p style="position:fixed; right:570px; top:580px; padding:5px"><a href="forgot_pass.php">Forgot Password?</a></p>
 </body>
 
