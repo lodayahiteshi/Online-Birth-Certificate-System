@@ -3,7 +3,7 @@
 <!-- CSS Files -->
 <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
 <link href="./assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
-<div class="sidebar" data-color="white" data-active-color="danger">
+<div class="sidebar" data-color="white" data-active-color="danger" id="sidebar-collapse">
     <div class="logo">
         <a href="https://www.creative-tim.com" class="simple-text logo-mini">
             <div class="logo-image-small">

@@ -2,12 +2,13 @@
     <div class="container-fluid">
         <div class="navbar-wrapper">
             <div class="navbar-toggle">
-                <button type="button" class="navbar-toggler">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidebar-collapse">
                     <span class="navbar-toggler-bar bar1"></span>
                     <span class="navbar-toggler-bar bar2"></span>
                     <span class="navbar-toggler-bar bar3"></span>
                 </button>
             </div>
+            <?php include 'sidebar.php' ?>
             <a class="navbar-brand" href="javascript:;">Admin Panel</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">

@@ -6,7 +6,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Paper Dashboard 2 by Creative Tim</title>
+    <title>New Applications</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -14,8 +14,12 @@
     <!-- CSS Files -->
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="./assets/demo/demo.css" rel="stylesheet" />
+    <!-- Bootstrap Data Tables -->
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <!-- Data table -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
     <script src="https://kit.fontawesome.com/a07eba2ffc.js" crossorigin="anonymous"></script>
 </head>
 
@@ -38,27 +42,26 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table">
+                                    <table class="table" id="new">
                                         <thead class="text-primary">
-                                            <th>ID</th>
-                                            <th>Application ID</th>
-                                            <th>FullNameOf Child</th>
-                                            <th>Gender</th>
-                                            <th>BirthDate (yyyy-mm-dd)</th>
-                                            <th>PlaceOfBirth</th>
-                                            <th>Father's Name</th>
-                                            <th>Mother's Name</th>
+                                            <th>ID&nbsp;&nbsp;&nbsp;</th>
+                                            <th>ApplicationID&nbsp;&nbsp;&nbsp;</th>
+                                            <th>FullName Of Child &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Gender&nbsp;&nbsp;&nbsp;</th>
+                                            <th>BirthDate (yyyy-mm-dd)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th data-orderable="false">PlaceOfBirth</th>
+                                            <th>Father's Name&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Mother's Name&nbsp;&nbsp;&nbsp;</th>
                                             <th>Email ID</th>
                                             <th>Aadhar Number</th>
-                                            <th>Religion</th>
-                                            <th>PermanantAddress</th>
-                                            <th>Informant's Name</th>
-                                            <th>Reporting Date</th>
-                                            <th>Status</th>
-                                            <th class="text-right">View Aadhar Proof</th>
-                                            <th class="text-right">View Affidivate</th>
-                                            <th class="text-center">Take Action</th>
-
+                                            <th>Religion&nbsp;&nbsp;&nbsp;</th>
+                                            <th data-orderable="false">PermanantAddress&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Informant's Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Reporting Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th class="text-right" data-orderable="false">View Aadhar Proof</th>
+                                            <th class="text-right" data-orderable="false">View Affidivate</th>
+                                            <th class="text-center" data-orderable="false">Take Action</th>
                                         </thead>
                                         <tbody>
 
@@ -103,11 +106,23 @@
                                                         $vid = $row['userID'];
                                                         $updated_remark = $_POST['remark'];
                                                         $updated_status = $_POST['status'];
-                                                        
+                                                        echo $updated_status;
                                                         $updations = mysqli_query($con, "UPDATE appid SET status='{$updated_status}', remark='{$updated_remark}' WHERE userID={$vid}");
                                                         if ($updations) {
-                                                            echo '<script>alert("Remark has been updated")</script>';
-                                                           echo "<script>window.location.href ='./view-new-applications.php'</script>";
+                                                            // $to_email = $row['femail'];
+                                                            $to_email = "sanika.dk@somaiya.edu";
+                                                            $subject = "Confirmation of Birth Certificate";
+                                                            $body = "Your Certificate has been " . $updated_status . " Visit - http://localhost:99/online-birth-certificate-system/user/index.php for more information";
+                                                            // $body = "Your Certificate has been  Visit - http://localhost:99/online-birth-certificate-system/user/index.php";
+                                                            $headers = "From: info.birthcertificate.services@gmail.com";
+
+                                                            if (mail($to_email, $subject, $body, $headers)) {
+                                                                echo "<script>alert('Email successfully sent to $to_email...')</script>";
+                                                            } else {
+                                                                echo "<script>alert('Email sending failed...')</script>";
+                                                            }
+                                                            // echo '<script>alert("Remark has been updated")</script>';
+                                                            echo "<script>window.location.replace('./view-new-applications.php')</script>";
                                                         } else {
                                                             echo '<script>alert("Error")</script>';
                                                         }
@@ -128,7 +143,11 @@
             </div>
 
             <?php include 'update-modal.php' ?>
-            
+            <script>
+                $(document).ready(function() {
+                    $('#new').dataTable();
+                });
+            </script>
 
             <footer class="footer footer-black footer-white">
                 <div class="container-fluid">
@@ -160,15 +179,15 @@
     <script src="./assets/js/core/jquery.min.js"></script>
     <script src="./assets/js/core/popper.min.js"></script>
     <script src="./assets/js/core/bootstrap.min.js"></script>
-    <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <!--  Google Maps Plugin    -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-    <!-- Chart JS -->
-    <script src="./assets/js/plugins/chartjs.min.js"></script>
     <!--  Notifications Plugin    -->
     <script src="./assets/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="./assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+    <!-- Data table -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://kit.fontawesome.com/a07eba2ffc.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

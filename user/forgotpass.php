@@ -1,5 +1,5 @@
 <?php
-include 'database_connect.php';
+include 'userregdb.php';
 if (isset($_POST['reset'])) {
 
     $username = $_POST['username'];

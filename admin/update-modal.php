@@ -10,7 +10,7 @@
             <div class="modal-body">
                 <table class="table table-bordered table-hover data-tables">
 
-                    <form method="POST" name="submit" name="approve">
+                    <form method="post" name="approve">
 
                         <tr>
                             <th>Remark :</th>
@@ -29,6 +29,15 @@
                                 </select>
                             </td>
                         </tr>
+                        <!-- <?php
+                                //$status = $_POST['status'];
+
+                                $email = "sanika.dk@somaiya.edu";
+                                $subject = "Confirmation of Birth Certificate";
+                                $stat = '<p id="demo"></p>';
+                                $body = "Your Certificate has been " . $stat . " Visit - http://localhost:99/online-birth-certificate-system/user/index.php";
+                                echo '<a href = "mailto:' . $email . '?subject=' . rawurlencode($subject) . '&body=' . rawurlencode($body) . '" onclick="getStatus()">Send Mail</a>' ?> -->
+
                 </table>
             </div>
             <div class="modal-footer">
@@ -36,14 +45,22 @@
                 <button type="submit" name="update" class="btn btn-primary">Update</button>
 
                 </form>
+                <!-- <script>
+                    function getStatus() {
+                        for (i = document.approve.status.options.length - 1; i >= 0; i--) {
+                            if (document.approve.status.options[i].selected) {
+                                console.log("Function Called");
+                                const x = document.approve.status.options[i].value;
+                                console.log(x);
+                                pid = document.getElementById('demo').innerHTML = x;
+                                console.log(pid);
+                                // document.approve.demo.innerText = x;
+                                // console.log("innerhtml added");
+                            }
+                        }
+                    }
+                </script> -->
             </div>
         </div>
     </div>
 </div>
-<!-- <?php
-        if (isset($_POST['update'])) {
-            $updated_remark = $_POST['remark'];
-            $updated_status = $_POST['status'];
-            $updations = "UPDATE appid SET status='{$updated_status}', remark='{$updated_remark}' WHERE userID={userID}";
-        }
-        ?> -->

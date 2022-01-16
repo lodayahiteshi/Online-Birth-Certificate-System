@@ -14,7 +14,24 @@
   <!-- CSS Files -->
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="./assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/a07eba2ffc.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap Data Tables -->
+  <link rel="stylesheet" href="http://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
+  <!-- Data Tables JS -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <style>
+    table.dataTable thead .sorting,
+    table.dataTable thead .sorting_asc,
+    table.dataTable thead .sorting_desc {
+      background: none;
+    }
+  </style>
+
 </head>
 
 <body class="">
@@ -23,6 +40,8 @@
       <li class="active">
       </li>
     </ul>
+
+    <!-- Sidebar -->
     <?php include "sidebar.php" ?> <div class="main-panel">
       <!-- Navbar -->
       <?php include "navbar.php"; ?>
@@ -36,26 +55,27 @@
               </div>
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table">
+                  <table class="dataTable" id="all">
                     <thead class="text-primary">
-                      <th>ID</th>
-                      <th>Application ID</th>
-                      <th>FullNameOf Child</th>
-                      <th>Gender</th>
-                      <th>BirthDate (yyyy-mm-dd)</th>
-                      <th>PlaceOfBirth</th>
-                      <th>Father's Name</th>
-                      <th>Mother's Name</th>
+                      <th>ID&nbsp;&nbsp;&nbsp;</th>
+                      <th>ApplicationID&nbsp;&nbsp;&nbsp;</th>
+                      <th>FullName Of Child &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Gender&nbsp;&nbsp;&nbsp;</th>
+                      <th>BirthDate (yyyy-mm-dd)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th data-orderable="false">PlaceOfBirth</th>
+                      <th>Father's Name&nbsp;&nbsp;&nbsp;</th>
+                      <th>Mother's Name&nbsp;&nbsp;&nbsp;</th>
                       <th>Email ID</th>
                       <th>Aadhar Number</th>
-                      <th>Religion</th>
-                      <th>PermanantAddress</th>
-                      <th>Informant's Name</th>
-                      <th>Reporting Date</th>
-                      <th>Status</th>
-                      <th class="text-right">View Aadhar Proof</th>
-                      <th class="text-right">View Affidivate</th>
-                      <th class="text-center">Take Action</th>
+                      <th>Religion&nbsp;&nbsp;&nbsp;</th>
+                      <th data-orderable="false">PermanantAddress&nbsp;&nbsp;&nbsp;</th>
+                      <th>Informant's Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Reporting Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Remark&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th class="text-right" data-orderable="false">View Aadhar Proof</th>
+                      <th class="text-right" data-orderable="false">View Affidivate</th>
+                      <th class="text-center" data-orderable="false">Take Action</th>
                     </thead>
                     <tbody>
 
@@ -85,6 +105,7 @@
                           <td><?php echo $row['inffname'] . " " . $row['infmname'] . " " . $row['inflname'] ?></td>
                           <td><?php echo $row['reportdate'] ?></td>
                           <td><?php echo $row['status'] ?></td>
+                          <td><?php echo $row['Remark'] ?></td>
                           <td class="text-center"><a href="download.php?aadhar_id=<?php echo $row['userID'] ?>"><i class="fas fa-eye"></i></a></td>
                           <td class="text-center"><a href="download.php?aff_id=<?php echo $row['userID'] ?>"><i class="fas fa-eye"></i></a></td>
                           <td>
@@ -121,9 +142,13 @@
           </div>
         </div>
       </div>
+      <script>
+        $(document).ready(function() {
+          $('#all').dataTable();
+        });
+      </script>
 
       <?php include 'update-modal.php' ?>
-
 
       <footer class="footer footer-black footer-white">
         <div class="container-fluid">
@@ -162,6 +187,10 @@
   <script src="./assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="./assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+  <!-- Data table -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
 </body>
 
 </html>

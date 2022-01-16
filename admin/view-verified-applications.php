@@ -14,6 +14,12 @@
     <!-- CSS Files -->
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <!-- Bootstrap Data Tables -->
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <!-- Data table -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
     <script src="https://kit.fontawesome.com/a07eba2ffc.js" crossorigin="anonymous"></script>
 </head>
 
@@ -36,8 +42,8 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class="text-primary">
+                                    <table class="table" id="verified" style="width:200%">
+                                        <!-- <thead class="text-primary">
                                             <th>ID</th>
                                             <th>Application ID</th>
                                             <th>FullNameOf Child</th>
@@ -57,7 +63,29 @@
                                             <th class="text-right">View Aadhar Proof</th>
                                             <th class="text-right">View Affidivate</th>
 
+                                        </thead> -->
+
+                                        <thead class="text-primary">
+                                            <th>ID&nbsp;&nbsp;&nbsp;</th>
+                                            <th>ApplicationID&nbsp;&nbsp;&nbsp;</th>
+                                            <th>FullName Of Child &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Gender&nbsp;&nbsp;&nbsp;</th>
+                                            <th>BirthDate (yyyy-mm-dd)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th data-orderable="false">PlaceOfBirth</th>
+                                            <th>Father's Name&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Mother's Name&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Email ID</th>
+                                            <th>Aadhar Number</th>
+                                            <th>Religion&nbsp;&nbsp;&nbsp;</th>
+                                            <th data-orderable="false">PermanantAddress&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Informant's Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Reporting Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th>Remark&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                            <th class="text-right" data-orderable="false">View Aadhar Proof</th>
+                                            <th class="text-right" data-orderable="false">View Affidivate</th>
                                         </thead>
+
                                         <tbody>
 
                                             <?php
@@ -104,7 +132,11 @@
                     </div>
                 </div>
             </div>
-
+            <script>
+                $(document).ready(function() {
+                    $('#verified').dataTable();
+                });
+            </script>
             <footer class="footer footer-black footer-white">
                 <div class="container-fluid">
                     <div class="row">
@@ -138,12 +170,14 @@
     <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
     <!--  Google Maps Plugin    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-    <!-- Chart JS -->
-    <script src="./assets/js/plugins/chartjs.min.js"></script>
     <!--  Notifications Plugin    -->
     <script src="./assets/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="./assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+    <!-- Data table -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
 </body>
 
 </html>

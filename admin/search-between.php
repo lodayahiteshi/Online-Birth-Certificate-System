@@ -14,7 +14,35 @@
     <!-- CSS Files -->
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <!-- Bootstrap Data Tables -->
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <!-- Data table -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
     <script src="https://kit.fontawesome.com/a07eba2ffc.js" crossorigin="anonymous"></script>
+    <style>
+        /* table.dataTable thead .sorting,
+        table.dataTable thead .sorting_asc,
+        table.dataTable thead .sorting_desc {
+            background: none;
+        } */
+        /* .dataTable>thead>tr>th[class*="sort"]:before,
+        .dataTable>thead>tr>th[class*="sort"]:after {
+            content: "" !important;
+        } */
+
+        /* table.dataTable thead .sorting:after,
+        table.dataTable thead .sorting_asc:after,
+        table.dataTable thead .sorting_desc:after,
+        table.dataTable thead .sorting:before,
+        table.dataTable thead .sorting_asc:before,
+        table.dataTable thead .sorting_desc:before {
+            display: none;
+            background: none;
+        } */
+    </style>
+
 </head>
 
 <body class="">
@@ -88,26 +116,26 @@
                                     $cnt = 1;
                                 ?>
                                     <div class="table-responsive">
-                                        <table class="table">
+                                        <table class="dataTable" id="search">
                                             <thead class="text-primary">
-                                                <th>ID</th>
-                                                <th>Application ID</th>
-                                                <th>FullNameOf Child</th>
-                                                <th>Gender</th>
-                                                <th>BirthDate (yyyy-mm-dd)</th>
-                                                <th>PlaceOfBirth</th>
-                                                <th>Father's Name</th>
-                                                <th>Mother's Name</th>
+                                                <th>ID&nbsp;&nbsp;&nbsp;</th>
+                                                <th>ApplicationID&nbsp;&nbsp;&nbsp;</th>
+                                                <th>FullName Of Child &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                                <th>Gender&nbsp;&nbsp;&nbsp;</th>
+                                                <th>BirthDate (yyyy-mm-dd)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                                <th data-orderable="false">PlaceOfBirth</th>
+                                                <th>Father's Name&nbsp;&nbsp;&nbsp;</th>
+                                                <th>Mother's Name&nbsp;&nbsp;&nbsp;</th>
                                                 <th>Email ID</th>
                                                 <th>Aadhar Number</th>
-                                                <th>Religion</th>
-                                                <th>PermanantAddress</th>
-                                                <th>Informant's Name</th>
-                                                <th>Reporting Date</th>
-                                                <th>Status</th>
-                                                <th class="text-right">View Aadhar Proof</th>
-                                                <th class="text-right">View Affidivate</th>
-                                                <th class="text-center"> Take Action</th>
+                                                <th>Religion&nbsp;&nbsp;&nbsp;</th>
+                                                <th data-orderable="false">PermanantAddress&nbsp;&nbsp;&nbsp;</th>
+                                                <th>Informant's Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                                <th>Reporting Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                                <th>Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                                <th class="text-right" data-orderable="false">View Aadhar Proof</th>
+                                                <th class="text-right" data-orderable="false">View Affidivate</th>
+                                                <th class="text-center" data-orderable="false">Take Action</th>
                                             </thead>
                                             <tbody>
                                                 <?php while ($row = mysqli_fetch_assoc($result)) {
@@ -153,6 +181,11 @@
                 </div>
 
                 <?php include 'update-modal.php' ?>
+                <script>
+                    $(document).ready(function() {
+                        $('#search').dataTable();
+                    });
+                </script>
 
                 <footer class="footer footer-black footer-white">
                     <div class="container-fluid">
@@ -186,14 +219,13 @@
     <script src="./assets/js/core/popper.min.js"></script>
     <script src="./assets/js/core/bootstrap.min.js"></script>
     <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <!--  Google Maps Plugin    -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-    <!-- Chart JS -->
-    <script src="./assets/js/plugins/chartjs.min.js"></script>
     <!--  Notifications Plugin    -->
     <script src="./assets/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="./assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+    <!-- Data table -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php
-include 'database_connect.php';
+include 'userregdb.php';
 
 if (isset($_POST['sign'])) {
 
@@ -18,7 +18,7 @@ if (isset($_POST['sign'])) {
             $reg = "INSERT into usertable values ('$username','$passwords')";
             $query_run = mysqli_query($con, $reg);
             if ($query_run) {
-                echo '<script type="text/javascript"> alert("User Registered.....Go to login") </script>';
+                echo '<script type="text/javascript"> alert("User Registered..You can now Login") </script>';
                 header('location:login_form.php');
             } else {
                 echo '<script type="text/javascript"> alert("Error") </script>';
