@@ -211,7 +211,7 @@
                                 If you wish to generate a birth - certicate, or regenerate a lost certificate or do necessary changes /modifications in the certificate, Login through the User Panel.
                             </p>
                         </div>
-                        <button class="btn btn-outline-primary btn-lg" type="button" onclick="window.location.href = './user/index.php';">
+                        <button class="btn btn-outline-primary btn-lg" type="button" onclick="window.location.href = 'user/index.php';">
                             Login Now
                         </button>
                     </div>
